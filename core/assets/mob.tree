@@ -1,0 +1,18 @@
+#
+# Dog tree
+#
+
+# Alias definitions
+import wander:"com.microlife.tasks.WanderTask"
+import lookForFood:"com.microlife.tasks.LookForFoodTask"
+import followPath:"com.microlife.tasks.FollowPathTask"
+import checkIsPicked:"com.microlife.tasks.CheckIsPickedTask"
+
+# Tree definition (note that root is optional)
+root
+  (checkIsPicked) selector
+    parallel
+      lookForFood # arguments?
+      sequence
+        wander
+        followPath
