@@ -30,8 +30,8 @@ public class DebugSystem extends IteratingSystem {
         AiComponent astarComponent = aiMapper.get(entity);
         Vector2 position = positionMapper.get(entity).vector;
 
-//        renderPath(astarComponent);
-        //renderCircle((int)position.x, (int)position.y, 10);
+        renderPath(astarComponent);
+        renderCircle((int) position.x, (int) position.y, 10);
     }
 
     private void renderPath(AiComponent astarComponent){
@@ -66,7 +66,7 @@ public class DebugSystem extends IteratingSystem {
         float radius2 = radius * radius;
 
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
-        shapeRenderer.setColor(new Color(Color.RED));
+        shapeRenderer.setColor(new Color(0.5f,1,0.5f,0.5f));
         for (int xCircle = -radius; xCircle <= radius; ++xCircle) {
             for (int yCircle = -radius; yCircle <= radius; ++yCircle) {
                 int d = xCircle * xCircle + yCircle * yCircle;

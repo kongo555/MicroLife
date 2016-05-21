@@ -44,7 +44,7 @@ public class Level {
         engine.addSystem(new MovementSystem(map, grid));
 
         entityFactor = new EntityFactor(engine, grid, astar);
-        int mobsSize = 100;
+        int mobsSize = 1;
         for (int i = 0; i < mobsSize; i++) {
             while(true) {
                 int x = MathUtils.random(Map.width-1);
@@ -56,7 +56,7 @@ public class Level {
                 }
             }
         }
-        int foodSize = 2000;
+        int foodSize = 20;
         for (int i = 0; i < foodSize; i++) {
             while(true) {
                 int x = MathUtils.random(Map.width-1);
